@@ -8,8 +8,8 @@ const App = () => {
   return (
     <React.Fragment>
       <div className="SOME-NICE-CSS">
-        <showItem />
-
+        <Item />
+          
 
 
       </div>
