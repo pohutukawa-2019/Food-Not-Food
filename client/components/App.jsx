@@ -1,20 +1,25 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import foodNotFood from '../foodNotFood'
 
-// import ShowItem from './ShowItem'
 // import Results from './Results'
 
-const App = () => {
-  return (
-    <React.Fragment>
-      <div className="SOME-NICE-CSS">
-        <showItem />
-
-
-
-      </div>
-    </React.Fragment>
-  )
+export default class App extends React.Component {
+  
+  state = {
+      score = 5,
+      currentItem = foodNotFood[0]
+  }
+  
+  render () {
+    return (
+      <React.Fragment>
+        <div className="SOME-NICE-CSS">
+          
+        </div>
+      </React.Fragment>
+    )
+  }
 }
 
 export default App
