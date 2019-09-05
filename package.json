@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "react-modal": "^3.10.1",
     "superagent": "^5.0.2"
   },
   "devDependencies": {
