@@ -1,0 +1,1 @@
+// Will take the user to the next image. Part of ShowItem.jsx.

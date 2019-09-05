@@ -1,0 +1,1 @@
+// This component will list the final score/health of the player.

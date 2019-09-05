@@ -1,0 +1,1 @@
+// This will be our No button, which will check if the item is food or not and display an Alert box accordingly. Part of ShowItem.jsx.
