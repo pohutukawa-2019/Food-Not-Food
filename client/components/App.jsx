@@ -4,6 +4,7 @@ import Item from './Item'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
 
+
 class App extends React.Component {
 
   state = {
