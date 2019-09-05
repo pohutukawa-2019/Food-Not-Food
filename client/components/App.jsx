@@ -1,4 +1,6 @@
 import React from 'react'
+
+import Item from './Item'
 import foodNotFood from '../foodNotFood'
 
 export default class App extends React.Component {
@@ -18,7 +20,7 @@ export default class App extends React.Component {
   render () {
     return (
       <>
-        
+        <Item />
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
           handleModalClose={this.handleModalClose} />
