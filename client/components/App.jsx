@@ -1,24 +1,32 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
-import foodNotFood from '../foodNotFood'
-import HealthBar from './HealthBar'
 
-// import Results from './Results'
+import Item from './Item'
+import HealthBar from './HealthBar'
+import foodNotFood from '../foodNotFood'
 
 export default class App extends React.Component {
-  
+
   state = {
-      score = 5,
-      currentItem = foodNotFood[0]
+    score: 5,
+    isAnswerModalVisible: false,
+    currentItem: foodNotFood[0]
   }
-  
+
+  handleModalClose = () => {
+    this.setState({
+      isAnswerModalVisible: false
+    })
+  }
+
   render () {
     return (
-      <React.Fragment>
-        <div className="SOME-NICE-CSS">
-          <HealthBar />
-        </div>
-      </React.Fragment>
+      <>
+        <HealthBar />
+        <Item />
+        <AnswerModal
+          isVisible={this.state.isAnswerModalVisible}
+          handleModalClose={this.handleModalClose} />
+      </>
     )
   }
 }

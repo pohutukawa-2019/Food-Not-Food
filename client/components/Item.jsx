@@ -41,14 +41,10 @@ export class ShowItem extends Component {
     return (
       <React.Fragment>
 
-        <div className="btn-group btn-group-toggle" data-toggle="buttons">
-          <label className="btn btn-secondary active">
-        <input type="radio" name="options" id="food" autocomplete="off" checked> FOOD
-            </label>
-          <label className="btn btn-secondary">
-            <input type="radio" name="options" id="notFood" autocomplete="off"> NOT FOOD
-            </label>
-        </div>
+  <div className="btn-group">
+      <button className="buttonEat">EAT</button>
+      <button className="buttonDontEat">DON'T EAT</button>
+    </div>
       
       </React.Fragment>
     )

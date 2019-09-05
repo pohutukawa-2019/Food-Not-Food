@@ -14,7 +14,7 @@ let foodNOTfood = {[
    // TREE COSTUME 
    id: 1,
    food: false,
-   img: 'https://images-na.ssl-images-amazon.com/images/I/81kscOVp6NL._SY450_.jpg',
+   img: 'https://images-na.ssl-images-amazon.com/images/I/81kscOVp6NL._SY450_.jpg'
  },
  {
    // Vape PEN
