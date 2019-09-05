@@ -4,7 +4,7 @@ import React from 'react'
 import foodNotFood from '../foodNotFood'
 import Item from './Item'
 // import Results from './Results'
-
+import AnswerModal from './AnswerModal'
 
 export default class App extends React.Component {
 
@@ -32,4 +32,4 @@ export default class App extends React.Component {
   }
 }
 
-export default App
+// export default App
