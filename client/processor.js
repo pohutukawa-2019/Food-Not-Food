@@ -13,8 +13,8 @@ export function getResponse (currentItem, willEat) {
     "Yeah, looks yum doesn't it?"
   ]
   if (willEat) {
-    return food ? messages[3] : message[0]
+    return food ? messages[3] : messages[0]
   } else {
-    return food ? message[2] : message[1]
+    return food ? messages[2] : messages[1]
   }
 }

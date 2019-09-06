@@ -21,17 +21,22 @@ class App extends React.Component {
   }
 
   showNext = willEat => {
-    const { score, currentItem } = this.state
+    const { score, currentItemIndex } = this.state
+    const currentItem = foodNotFood[currentItemIndex]
     this.setState({
       score: getScore(currentItem, score, willEat),
-      response: getReponse(currentItem, willEat),
+      response: getResponse(currentItem, willEat),
       currentItemIndex: this.state.currentItemIndex + 1,
       isAnswerModalVisible: true
     })
   }
 
   render () {
-    const { currentItemIndex, isAnswerModalVisible } = this.state
+    const {
+      response,
+      currentItemIndex,
+      isAnswerModalVisible } = this.state
+
     return (
       <>
         <div className="container">
@@ -50,6 +55,7 @@ class App extends React.Component {
           </div>
         </div>
         <AnswerModal
+          message={response}
           isVisible={isAnswerModalVisible}
           handleModalClose={this.handleModalClose} />
       </>
