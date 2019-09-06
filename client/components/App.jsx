@@ -6,7 +6,6 @@ import foodNotFood from '../foodNotFood'
 
 
 class App extends React.Component {
-
   state = {
     score: 5,
     isAnswerModalVisible: false,
@@ -16,6 +15,12 @@ class App extends React.Component {
   handleModalClose = () => {
     this.setState({
       isAnswerModalVisible: false
+    })
+  }
+
+  handleClick = () => {
+    this.setState({
+      isAnswerModalVisible: true
     })
   }
 
@@ -31,4 +36,4 @@ class App extends React.Component {
   }
 }
 
-// export default App
+export default App
