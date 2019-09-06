@@ -6,7 +6,9 @@ import foodNotFood from '../foodNotFood'
 
 export class ShowItem extends Component {
 
-
+  state = {
+   willEat: true
+  }
 
   render() {
 
@@ -19,8 +21,13 @@ export class ShowItem extends Component {
           </div>
         <div className="col-2">
           <div className="btn-group pt-5">
-            <button onClick={} className="buttonEat">EAT</button>
-            <button onClick={} className="buttonDontEat">DON'T EAT</button>
+            <button onClick={() => {      
+              this.setState({
+              eat: true
+            })} } className="buttonEat">EAT</button>
+            <button onClick={() => this.setState({
+              eat: false
+            })} className="buttonDontEat">DON'T EAT</button>
             </div>
           </div>
 

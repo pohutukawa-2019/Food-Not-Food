@@ -28,11 +28,11 @@ class App extends React.Component {
     })
   }
 
-  getElementByID = el => {
-    this.setState({
+  // getElementByID = el => {
+  //   this.setState({
 
-    })
-  }
+  //   })
+  // }
 
   handleClick = () => {
     this.setState({
