@@ -1,10 +1,17 @@
 body {
-
+  background-color: rgb(252, 243, 196);
 }
 
 h1 {
   font-size: 5rem;
   font-weight: bolder;
+}
+
+.background {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
 }
 
 .btn-group button {
@@ -51,11 +58,12 @@ h1 {
 
 .healthBar {
   padding: 50px;
+  margin-left: 140px;
   width: 75%;
 }
 
 .header {
-padding: 50px;
+padding: 30px 0px 10px 40px;
 text-align: center;
 font-family: 'Chilanka', cursive;
 }
