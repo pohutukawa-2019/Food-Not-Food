@@ -19,8 +19,11 @@ function AnswerModal (props) {
       style={modalStyle}
       isOpen={props.isVisible}
       onRequestClose={props.handleModalClose}>
-      <p>{props.message || 'Nice answer'}</p>
-      <button onClick={props.handleModalClose}>OK</button>
+      <p>{props.message}</p>
+      <button
+        style={{float: 'right'}}
+        onClick={props.handleModalClose}
+      >Continue</button>
     </Modal>
   )
 }

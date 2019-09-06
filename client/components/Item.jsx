@@ -55,7 +55,8 @@ export class ShowItem extends Component {
             </div>
           </div>
           <div className="col-2">
-          <button className="buttonEat">NEXT</button>
+            <button className="buttonEat"
+              onClick={() => this.props.showNext(true)}>NEXT</button>
          </div></div>
         
         </div>
