@@ -33,12 +33,6 @@ export class ShowItem extends Component {
 // SECOND OPTION WOULD BE BETTER FOR WORKING OUT A HEALTH BAR?? 
 // FINDING THE AVERAGE OF VALUES IN THE ARRAY WOULD TAKE TOO LONG
 
-
-
-
-
-
-
   render() {
     return (
       <React.Fragment>
@@ -55,7 +49,9 @@ export class ShowItem extends Component {
             </div>
           </div>
           <div className="col-2">
-          <button className="buttonEat">NEXT</button>
+            <button
+              onClick={() => this.props.showNext(true)}
+              className="buttonEat">NEXT</button>
          </div></div>
         
         </div>

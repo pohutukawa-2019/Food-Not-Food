@@ -4,11 +4,12 @@ import Item from './Item'
 import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
-import {getScore, getReponse} from '../processor'
+import { getScore, getReponse } from '../processor'
 
 class App extends React.Component {
   state = {
     score: 5,
+    response: '',
     isAnswerModalVisible: false,
     currentItem: foodNotFood[0]
   }
@@ -19,8 +20,11 @@ class App extends React.Component {
     })
   }
 
-  handleClick = () => {
+  showNext = (willEat) => {
+    const { score, currentItem } = this.state
     this.setState({
+      score: getScore(currentItem, score, willEat),
+      response: getReponse(currentItem, willEat)
       isAnswerModalVisible: true
     })
   }
@@ -36,7 +40,7 @@ class App extends React.Component {
         <HealthBar />
         </div>
         <div className='row'>
-        <Item />
+        <Item showNext={this.showNext} />
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
           handleModalClose={this.handleModalClose} />
