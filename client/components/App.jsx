@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Item from './Item'
+import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
 
@@ -27,6 +28,7 @@ class App extends React.Component {
   render () {
     return (
       <>
+        <HealthBar />
         <Item />
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
