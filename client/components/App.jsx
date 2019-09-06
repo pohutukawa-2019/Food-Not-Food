@@ -39,7 +39,14 @@ class App extends React.Component {
             <h1>Food? Not Food?</h1>
           </div>
           <div className="healthBar">
-            <HealthBar />
+            <HealthBar 
+              score={this.state.score}/>
+          </div>
+          <div className='row'>
+            <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
+            <AnswerModal
+              isVisible={this.state.isAnswerModalVisible}
+              handleModalClose={this.handleModalClose} />
           </div>
           <div className='row'>
             <Item
