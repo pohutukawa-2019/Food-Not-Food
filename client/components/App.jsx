@@ -9,6 +9,7 @@ import foodNotFood from '../foodNotFood'
 class App extends React.Component {
   state = {
     score: 5,
+    response: '',
     isAnswerModalVisible: false,
     currentItem: foodNotFood[0]
   }
@@ -16,6 +17,20 @@ class App extends React.Component {
   handleModalClose = () => {
     this.setState({
       isAnswerModalVisible: false
+    })
+  }
+
+  showNext = willEat => {
+    this.setState({
+      response: getMessage(),
+      isAnswerModalVisible: true,
+
+    })
+  }
+
+  getElementByID = el => {
+    this.setState({
+
     })
   }
 
@@ -29,7 +44,7 @@ class App extends React.Component {
     return (
       <>
         <HealthBar />
-        <Item />
+        <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
           handleModalClose={this.handleModalClose} />
