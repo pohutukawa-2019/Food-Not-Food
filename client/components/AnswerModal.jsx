@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Modal from 'react-modal'
+
 const modalStyle = {
   content: {
     top: '50%',
@@ -17,6 +19,8 @@ function AnswerModal (props) {
       style={modalStyle}
       isOpen={props.isVisible}
       onRequestClose={props.handleModalClose}>
+      <p>{props.message || 'Nice answer'}</p>
+      <button onClick={props.handleModalClose}>OK</button>
     </Modal>
   )
 }

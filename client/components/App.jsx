@@ -2,10 +2,11 @@ import React from 'react'
 
 import Item from './Item'
 import HealthBar from './HealthBar'
+import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
 
-export default class App extends React.Component {
 
+class App extends React.Component {
   state = {
     score: 5,
     isAnswerModalVisible: false,

@@ -1,5 +1,3 @@
-
-
 /// MORE IDEAS FOR FOOD NOT FOOD
 /// Himalayan Rock Salt
 // TOOTH PASTE
@@ -9,7 +7,7 @@
 // PAPER
 // DIRT geophagy lol
 
-let foodNOTfood = {[
+module.exports = [
  {
    // TREE COSTUME 
    id: 1,
@@ -72,9 +70,3 @@ let foodNOTfood = {[
   img: 'https://worldflavorz.com/wp-content/uploads/2013/04/Szechuan-Peppers-main.jpg'
  }
 ]
-}
-
-
-module.exports = {
-  foodNOTfood
-}

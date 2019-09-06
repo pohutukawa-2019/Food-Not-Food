@@ -40,11 +40,10 @@ export class ShowItem extends Component {
   render() {
     return (
       <React.Fragment>
-
-  <div className="btn-group">
-      <button className="buttonEat">EAT</button>
-      <button className="buttonDontEat">DON'T EAT</button>
-    </div>
+      <div className="btn-group">
+        <button className="buttonEat">EAT</button>
+        <button className="buttonDontEat">DON'T EAT</button>
+      </div>
       
       </React.Fragment>
     )
