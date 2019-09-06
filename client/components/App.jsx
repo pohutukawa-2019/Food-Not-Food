@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Item from './Item'
+import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
 
 
 class App extends React.Component {
-
   state = {
     score: 5,
     isAnswerModalVisible: false,
@@ -19,9 +19,16 @@ class App extends React.Component {
     })
   }
 
+  handleClick = () => {
+    this.setState({
+      isAnswerModalVisible: true
+    })
+  }
+
   render () {
     return (
       <>
+        <HealthBar />
         <Item />
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
