@@ -4,7 +4,7 @@ import Item from './Item'
 import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
-
+import {getScore, getReponse} from '../processor'
 
 class App extends React.Component {
   state = {
