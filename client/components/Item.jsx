@@ -7,14 +7,14 @@ class Item extends Component {
   }
 
   render() {
-    const { showNext } = this.props
+    const { currentItem, showNext } = this.props
     return (
       <React.Fragment>
         <div className="container">
           <div className="row">
             <div className="col-5"> 
               <img className="img-fluid pt-5"
-                src={this.props.currentItem.img} alt=""/>
+                src={currentItem.img} alt=""/>
             </div>
             <div className="col-2">
               <div className="btn-group pt-5">

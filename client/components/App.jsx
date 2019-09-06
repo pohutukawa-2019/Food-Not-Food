@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Item from './Item'
+import PlayAgain from './PlayAgain'
 import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
@@ -31,6 +32,15 @@ class App extends React.Component {
     })
   }
 
+  restart = () => {
+    this.setState({
+      score: 5,
+      response: '',
+      currentItemIndex: 0,
+      isAnswerModalVisible: false
+    })
+  }
+
   render () {
     const {
       response,
@@ -48,9 +58,12 @@ class App extends React.Component {
               <HealthBar score={this.state.score}/>
             </div>
             <div className='row'>
-              <Item
-                showNext={this.showNext}
-                currentItem={foodNotFood[currentItemIndex]} />
+              {foodNotFood[currentItemIndex]
+                ? <Item
+                  showNext={this.showNext}
+                  currentItem={foodNotFood[currentItemIndex]} />
+                : <PlayAgain restart={this.restart} />
+              }
             </div>
           </div>
         </div>
