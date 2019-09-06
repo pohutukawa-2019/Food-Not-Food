@@ -1,5 +1,5 @@
 body {
-  
+
 }
 
 h1 {
@@ -10,10 +10,9 @@ h1 {
 .btn-group button {
   color: white;
   padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+  cursor: pointer; 
+  float: left; 
 }
-
 
 .buttonEat{
   background-color: #4CAF50; 
@@ -41,6 +40,13 @@ h1 {
 }
 .btn-group .buttonDontEat:hover {
   background-color: #ea3030;
+}
+
+.btn-group .buttonEat:active {
+  background-color: #00aaff;
+}
+.btn-group .buttonDontEat:active {
+  background-color: #00aaff;
 }
 
 .healthBar {

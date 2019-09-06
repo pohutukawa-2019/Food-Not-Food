@@ -8,7 +8,8 @@ import {getScore, getReponse} from '../processor'
 
 class App extends React.Component {
   state = {
-    score: 3,
+    score: 5,
+    response: '',
     isAnswerModalVisible: false,
     currentItem: foodNotFood[0]
   }
@@ -18,6 +19,20 @@ class App extends React.Component {
       isAnswerModalVisible: false
     })
   }
+
+  showNext = willEat => {
+    this.setState({
+      response: getMessage(),
+      isAnswerModalVisible: true,
+
+    })
+  }
+
+  // getElementByID = el => {
+  //   this.setState({
+
+  //   })
+  // }
 
   handleClick = () => {
     this.setState({
@@ -37,7 +52,7 @@ class App extends React.Component {
         score={this.state.score}/>
         </div>
         <div className='row'>
-        <Item />
+        <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
         <AnswerModal
           isVisible={this.state.isAnswerModalVisible}
           handleModalClose={this.handleModalClose} />
