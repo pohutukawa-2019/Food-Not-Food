@@ -44,20 +44,22 @@ class App extends React.Component {
     return (
       <>
       <div className="container">
-      <div className='header row'>
-      <h1>Food? Not Food?</h1>
-      </div>
-      <div className="healthBar">
-        <HealthBar 
-        score={this.state.score}/>
+        <div className='header row'>
+          <h1>Food? Not Food?</h1>
         </div>
-        <div className='row'>
-        <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
-        <AnswerModal
-          isVisible={this.state.isAnswerModalVisible}
-          handleModalClose={this.handleModalClose} />
+        <div className="background">
+          <div className="healthBar">
+            <HealthBar 
+            score={this.state.score}/>
           </div>
+          <div className='row'>
+            <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
+            <AnswerModal
+              isVisible={this.state.isAnswerModalVisible}
+              handleModalClose={this.handleModalClose} />
           </div>
+        </div>
+      </div>
       </>
     )
   }
