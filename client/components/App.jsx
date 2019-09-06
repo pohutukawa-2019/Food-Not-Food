@@ -8,7 +8,7 @@ import {getScore, getReponse} from '../processor'
 
 class App extends React.Component {
   state = {
-    score: 5,
+    score: 3,
     isAnswerModalVisible: false,
     currentItem: foodNotFood[0]
   }
@@ -33,7 +33,8 @@ class App extends React.Component {
       <h1>Food? Not Food?</h1>
       </div>
       <div className="healthBar">
-        <HealthBar />
+        <HealthBar 
+        score={this.state.score}/>
         </div>
         <div className='row'>
         <Item />

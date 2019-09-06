@@ -1,3 +1,12 @@
+body {
+  
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
 .btn-group button {
   color: white;
   padding: 10px 24px; /* Some padding */
@@ -10,16 +19,13 @@
   background-color: #4CAF50; 
   border: 1px solid green; 
   color: white;
+  margin-right: 5px;
 }
 
 .buttonDontEat {
   background-color: rgb(255, 4, 4); 
   border: 1px solid rgb(128, 0, 0); 
   color: white;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
 }
 
 /* Clear floats (clearfix hack) */
