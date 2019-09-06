@@ -1,1 +1,1 @@
-// Will take the user to the next image. Part of ShowItem.jsx.
+// Will take the user to the next image. Part of Item.jsx.

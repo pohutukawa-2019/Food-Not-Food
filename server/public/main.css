@@ -36,3 +36,14 @@
 .btn-group .buttonDontEat:hover {
   background-color: #ea3030;
 }
+
+.healthBar {
+  padding: 50px;
+  width: 75%;
+}
+
+.header {
+padding: 50px;
+text-align: center;
+font-family: 'Chilanka', cursive;
+}
