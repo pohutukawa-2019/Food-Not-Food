@@ -1,6 +1,8 @@
 // Code to display the image will go here. StartButton.jsx will need to be linked to this component
 
 import React, { Component } from 'react'
+import foodNotFood from '../foodNotFood'
+
 
 export class ShowItem extends Component {
 
@@ -40,10 +42,13 @@ export class ShowItem extends Component {
   render() {
     return (
       <React.Fragment>
-      <div className="btn-group">
-        <button className="buttonEat">EAT</button>
-        <button className="buttonDontEat">DON'T EAT</button>
-      </div>
+     <div className="img">
+        <img src={foodNotFood[0].img} alt=""/>
+       </div> 
+  <div className="btn-group">
+      <button className="buttonEat">EAT</button>
+      <button className="buttonDontEat">DON'T EAT</button>
+    </div>
       
       </React.Fragment>
     )
