@@ -42,14 +42,23 @@ export class ShowItem extends Component {
   render() {
     return (
       <React.Fragment>
-     <div className="img">
-        <img src={foodNotFood[0].img} alt=""/>
-       </div> 
-  <div className="btn-group">
-      <button className="buttonEat">EAT</button>
-      <button className="buttonDontEat">DON'T EAT</button>
-    </div>
-      
+        <div className="container">
+          <div className="row bg-primary">
+            <div className="col-5"> 
+              <img className="img-fluid" src={foodNotFood[3].img} alt=""/>
+          </div>
+        <div className="col-2">
+          <div className="btn-group">
+            <button className="buttonEat">EAT</button>
+            <button className="buttonDontEat">DON'T EAT</button>
+         
+            </div>
+          </div>
+          <div className="col-2">
+          <button className="buttonEat">NEXT</button>
+         </div></div>
+        
+        </div>
       </React.Fragment>
     )
   }
