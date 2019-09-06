@@ -43,7 +43,7 @@ export class ShowItem extends Component {
     return (
       <React.Fragment>
         <div className="container">
-          <div className="row bg-primary">
+          <div className="row">
             <div className="col-5"> 
               <img className="img-fluid" src={foodNotFood[3].img} alt=""/>
           </div>
