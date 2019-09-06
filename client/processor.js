@@ -5,6 +5,7 @@ export function getScore (currentItem, currentScore, willEat) {
 }
 
 export function getResponse (currentItem, willEat) {
+  const { food } = currentItem
   const messages = [
     "Really?! You would eat that?!",
     "Good choice. I wouldn't eat it either.",
@@ -12,8 +13,8 @@ export function getResponse (currentItem, willEat) {
     "Yeah, looks yum doesn't it?"
   ]
   if (willEat) {
-    return currentItem.food ? messages[3] : message[0]
+    return food ? messages[3] : message[0]
   } else {
-    return currentItem.food ? message[2] : message[1]
+    return food ? message[2] : message[1]
   }
 }

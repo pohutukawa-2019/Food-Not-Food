@@ -32,28 +32,37 @@ export class ShowItem extends Component {
 
 // SECOND OPTION WOULD BE BETTER FOR WORKING OUT A HEALTH BAR?? 
 // FINDING THE AVERAGE OF VALUES IN THE ARRAY WOULD TAKE TOO LONG
+  state = {
+   willEat: true
+  }
 
   render() {
+
     return (
       <React.Fragment>
         <div className="container">
           <div className="row">
             <div className="col-5"> 
-              <img className="img-fluid" src={foodNotFood[3].img} alt=""/>
-          </div>
-        <div className="col-2">
-          <div className="btn-group">
-            <button className="buttonEat">EAT</button>
-            <button className="buttonDontEat">DON'T EAT</button>
-         
+              <img className="img-fluid pt-5" src={this.props.currentItem.img} alt=""/>
+            </div>
+            <div className="col-2">
+              <div className="btn-group pt-5">
+                <button onClick={() => {      
+                  this.setState({
+                    willEat: true
+                })}} className="buttonEat">EAT</button>
+                <button onClick={() => {
+                  this.setState({
+                    willEat: false
+                })}} className="buttonDontEat">DON'T EAT</button>
+              </div>
+            </div>
+            <div className="col-2">
+              <button
+                onClick={() => this.props.showNext(this.state.willEat)}
+                className="buttonEat">NEXT</button>
             </div>
           </div>
-          <div className="col-2">
-            <button
-              onClick={() => this.props.showNext(true)}
-              className="buttonEat">NEXT</button>
-         </div></div>
-        
         </div>
       </React.Fragment>
     )

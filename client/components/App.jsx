@@ -4,14 +4,14 @@ import Item from './Item'
 import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
-import { getScore, getReponse } from '../processor'
+import { getScore, getResponse } from '../processor'
 
 class App extends React.Component {
   state = {
     score: 5,
     response: '',
     isAnswerModalVisible: false,
-    currentItem: foodNotFood[0]
+    currentItemIndex: 0
   }
 
   handleModalClose = () => {
@@ -20,32 +20,36 @@ class App extends React.Component {
     })
   }
 
-  showNext = (willEat) => {
+  showNext = willEat => {
     const { score, currentItem } = this.state
     this.setState({
       score: getScore(currentItem, score, willEat),
-      response: getReponse(currentItem, willEat)
+      response: getReponse(currentItem, willEat),
+      currentItemIndex: this.state.currentItemIndex + 1,
       isAnswerModalVisible: true
     })
   }
 
   render () {
+    const { currentItemIndex, isAnswerModalVisible } = this.state
     return (
       <>
-      <div className="container">
-      <div className='header row'>
-      <h1>Food? Not Food?</h1>
-      </div>
-      <div className="healthBar">
-        <HealthBar />
+        <div className="container">
+          <div className='header row'>
+            <h1>Food? Not Food?</h1>
+          </div>
+          <div className="healthBar">
+            <HealthBar />
+          </div>
+          <div className='row'>
+            <Item
+              showNext={this.showNext}
+              currentItem={foodNotFood[currentItemIndex]} />
+            <AnswerModal
+              isVisible={isAnswerModalVisible}
+              handleModalClose={this.handleModalClose} />
+          </div>
         </div>
-        <div className='row'>
-        <Item showNext={this.showNext} />
-        <AnswerModal
-          isVisible={this.state.isAnswerModalVisible}
-          handleModalClose={this.handleModalClose} />
-          </div>
-          </div>
       </>
     )
   }
