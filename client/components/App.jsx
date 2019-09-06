@@ -4,14 +4,14 @@ import Item from './Item'
 import HealthBar from './HealthBar'
 import AnswerModal from './AnswerModal'
 import foodNotFood from '../foodNotFood'
-import {getScore, getReponse} from '../processor'
+import { getScore, getResponse } from '../processor'
 
 class App extends React.Component {
   state = {
     score: 5,
     response: '',
     isAnswerModalVisible: false,
-    currentItem: foodNotFood[0]
+    currentItemIndex: 0
   }
 
   handleModalClose = () => {
@@ -21,45 +21,37 @@ class App extends React.Component {
   }
 
   showNext = willEat => {
+    const { score, currentItem } = this.state
     this.setState({
-      response: getMessage(),
-      isAnswerModalVisible: true,
-
-    })
-  }
-
-  // getElementByID = el => {
-  //   this.setState({
-
-  //   })
-  // }
-
-  handleClick = () => {
-    this.setState({
+      score: getScore(currentItem, score, willEat),
+      response: getReponse(currentItem, willEat),
+      currentItemIndex: this.state.currentItemIndex + 1,
       isAnswerModalVisible: true
     })
   }
 
   render () {
+    const { currentItemIndex, isAnswerModalVisible } = this.state
     return (
       <>
-      <div className="container">
-        <div className='header row'>
-          <h1>Food? Not Food?</h1>
-        </div>
-        <div className="background">
-          <div className="healthBar">
-            <HealthBar 
-            score={this.state.score}/>
+        <div className="container">
+          <div className='header row'>
+            <h1>Food? Not Food?</h1>
           </div>
-          <div className='row'>
-            <Item currentItem={this.state.currentItem} showNext={this.showNext}/>
-            <AnswerModal
-              isVisible={this.state.isAnswerModalVisible}
-              handleModalClose={this.handleModalClose} />
+          <div className="background">
+            <div className="healthBar">
+              <HealthBar score={this.state.score}/>
+            </div>
+            <div className='row'>
+              <Item
+                showNext={this.showNext}
+                currentItem={foodNotFood[currentItemIndex]} />
+            </div>
           </div>
         </div>
-      </div>
+        <AnswerModal
+          isVisible={isAnswerModalVisible}
+          handleModalClose={this.handleModalClose} />
       </>
     )
   }
